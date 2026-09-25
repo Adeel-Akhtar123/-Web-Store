@@ -1,396 +1,157 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>MarketNest | Online Market & Handmade Store</title>
-
-    <link rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <title>LuxeCart | Beauty & Jewellery Store</title>
 
     <link rel="stylesheet" href="style.css">
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+        rel="stylesheet"
+    >
 </head>
 
 <body>
 
-<!-- ==============================
-     TOP ANNOUNCEMENT
-================================= -->
+<!-- =========================
+     TOP OFFER BAR
+========================= -->
 
-<div class="announcement">
-    🎉 Special Offer: Get <strong>20% OFF</strong> on every market product!
+<div class="top-bar">
+    <p>
+        🎁 <strong>BUY 1 GET 1 FREE</strong>
+        &nbsp; | &nbsp;
+        💄 Cosmetics have <strong>5% OFF</strong>
+        &nbsp; | &nbsp;
+        🚚 Free delivery on orders over Rs. 5,000
+    </p>
 </div>
 
 
-<!-- ==============================
+<!-- =========================
      NAVBAR
-================================= -->
+========================= -->
 
 <header class="navbar">
 
-    <div class="logo">
-        <i class="fa-solid fa-basket-shopping"></i>
-        <span>Market<span>Nest</span></span>
+    <div class="nav-container">
+
+        <a href="#" class="logo">
+            <span class="logo-icon">✦</span>
+            Luxe<span>Cart</span>
+        </a>
+
+        <nav class="desktop-nav">
+            <a href="#home">Home</a>
+            <a href="#products">Shop</a>
+            <a href="#offers">Offers</a>
+            <a href="#categories">Categories</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+        <div class="nav-actions">
+
+            <button class="search-button" id="searchToggle">
+                🔍
+            </button>
+
+            <button class="wishlist-button">
+                ♡
+                <span class="wishlist-count">0</span>
+            </button>
+
+            <button class="cart-button" id="cartButton">
+                🛒
+                <span class="cart-count">0</span>
+            </button>
+
+            <button class="menu-button" id="menuButton">
+                ☰
+            </button>
+
+        </div>
+
     </div>
 
-    <nav id="navMenu">
+
+    <!-- SEARCH BOX -->
+
+    <div class="search-container" id="searchContainer">
+
+        <div class="search-box">
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search cosmetics, jewellery, keychains..."
+            >
+
+            <button id="closeSearch">✕</button>
+
+        </div>
+
+    </div>
+
+
+    <!-- MOBILE MENU -->
+
+    <div class="mobile-menu" id="mobileMenu">
+
         <a href="#home">Home</a>
-        <a href="#products">Products</a>
-        <a href="#handmade">Handmade</a>
-        <a href="#about">About</a>
+        <a href="#products">Shop</a>
+        <a href="#offers">Offers</a>
+        <a href="#categories">Categories</a>
         <a href="#contact">Contact</a>
-    </nav>
-
-    <div class="nav-actions">
-
-        <button class="search-btn" onclick="focusSearch()">
-            <i class="fa-solid fa-magnifying-glass"></i>
-        </button>
-
-        <button class="cart-btn" onclick="openCart()">
-            <i class="fa-solid fa-cart-shopping"></i>
-            <span id="cartCount">0</span>
-        </button>
-
-        <button class="menu-btn" onclick="toggleMenu()">
-            <i class="fa-solid fa-bars"></i>
-        </button>
 
     </div>
 
 </header>
 
 
-<!-- ==============================
-     HERO SECTION
-================================= -->
+<!-- =========================
+     HERO
+========================= -->
 
 <section class="hero" id="home">
 
+    <div class="hero-overlay"></div>
+
     <div class="hero-content">
 
-        <span class="hero-badge">
-            <i class="fa-solid fa-truck-fast"></i>
-            Fast & Reliable Delivery
+        <span class="hero-small">
+            ✨ YOUR STYLE. YOUR BEAUTY. YOUR CHOICE.
         </span>
 
         <h1>
-            Everything You Need,
-            <span>Delivered To You.</span>
+            Discover Your
+            <span>Perfect Style</span>
         </h1>
 
         <p>
-            Shop everyday market essentials and discover
-            beautiful handmade products created with care.
+            Shop premium cosmetics, beautiful jewellery and
+            unique keychains — delivered directly to your door.
         </p>
 
         <div class="hero-buttons">
 
             <a href="#products" class="primary-btn">
                 Shop Now
-                <i class="fa-solid fa-arrow-right"></i>
+                <span>→</span>
             </a>
 
-            <a href="#handmade" class="secondary-btn">
-                Explore Handmade
+            <a href="#offers" class="secondary-btn">
+                View Offers
             </a>
 
         </div>
 
-        <div class="hero-features">
-
-            <div>
-                <i class="fa-solid fa-percent"></i>
-                <div>
-                    <strong>20% OFF</strong>
-                    <small>Market Products</small>
-                </div>
-            </div>
-
-            <div>
-                <i class="fa-solid fa-truck"></i>
-                <div>
-                    <strong>Fast Delivery</strong>
-                    <small>To Your Door</small>
-                </div>
-            </div>
-
-            <div>
-                <i class="fa-solid fa-shield-heart"></i>
-                <div>
-                    <strong>Secure</strong>
-                    <small>Shopping</small>
-                </div>
-            </div>
-
-        </div>
-
-    </div>
-
-    <div class="hero-image">
-
-        <div class="floating-card card-one">
-            <i class="fa-solid fa-percent"></i>
-            <span>20% OFF</span>
-        </div>
-
-        <div class="hero-circle">
-            🛍️
-        </div>
-
-        <div class="floating-card card-two">
-            <i class="fa-solid fa-truck-fast"></i>
-            <span>Fast Delivery</span>
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- ==============================
-     CATEGORIES
-================================= -->
-
-<section class="categories">
-
-    <div class="section-heading">
-
-        <span>SHOP BY CATEGORY</span>
-
-        <h2>What are you looking for?</h2>
-
-    </div>
-
-    <div class="category-grid">
-
-        <button onclick="filterProducts('all')" class="category-card active">
-            <div>🛍️</div>
-            <h3>All Products</h3>
-        </button>
-
-        <button onclick="filterProducts('market')" class="category-card">
-            <div>🛒</div>
-            <h3>Market</h3>
-        </button>
-
-        <button onclick="filterProducts('handmade')" class="category-card">
-            <div>🧶</div>
-            <h3>Handmade</h3>
-        </button>
-
-        <button onclick="filterProducts('food')" class="category-card">
-            <div>🍯</div>
-            <h3>Food</h3>
-        </button>
-
-        <button onclick="filterProducts('home')" class="category-card">
-            <div>🏠</div>
-            <h3>Home</h3>
-        </button>
-
-    </div>
-
-</section>
-
-
-<!-- ==============================
-     PRODUCTS
-================================= -->
-
-<section class="products-section" id="products">
-
-    <div class="section-heading">
-
-        <span>OUR PRODUCTS</span>
-
-        <h2>Fresh Market Products</h2>
-
-        <p>
-            Save 20% automatically on every market product.
-        </p>
-
-    </div>
-
-
-    <div class="shop-controls">
-
-        <div class="search-box">
-
-            <i class="fa-solid fa-magnifying-glass"></i>
-
-            <input
-                type="text"
-                id="searchInput"
-                placeholder="Search products..."
-                oninput="searchProducts()"
-            >
-
-        </div>
-
-        <select id="sortProducts" onchange="sortProducts()">
-
-            <option value="default">Sort Products</option>
-            <option value="low">Price: Low to High</option>
-            <option value="high">Price: High to Low</option>
-
-        </select>
-
-    </div>
-
-
-    <div class="product-grid" id="productGrid"></div>
-
-</section>
-
-
-<!-- ==============================
-     DISCOUNT BANNER
-================================= -->
-
-<section class="discount-banner">
-
-    <div class="discount-content">
-
-        <div class="discount-icon">
-            %
-        </div>
-
-        <div>
-
-            <span>LIMITED TIME OFFER</span>
-
-            <h2>Get 20% OFF Market Products</h2>
-
-            <p>
-                Discount is automatically calculated at checkout.
-            </p>
-
-        </div>
-
-    </div>
-
-    <a href="#products" class="discount-btn">
-        Shop Deals
-    </a>
-
-</section>
-
-
-<!-- ==============================
-     HANDMADE
-================================= -->
-
-<section class="handmade-section" id="handmade">
-
-    <div class="section-heading">
-
-        <span>CRAFTED WITH LOVE</span>
-
-        <h2>Beautiful Handmade Products</h2>
-
-        <p>
-            Unique products made by talented local creators.
-        </p>
-
-    </div>
-
-    <div class="handmade-grid">
-
-        <div class="handmade-card">
-
-            <div class="handmade-image">
-                🧺
-            </div>
-
-            <div>
-                <h3>Handwoven Basket</h3>
-                <p>Beautifully crafted natural basket.</p>
-
-                <strong>Rs. 1,500</strong>
-
-                <button onclick="addProductByName('Handwoven Basket')">
-                    Add to Cart
-                </button>
-            </div>
-
-        </div>
-
-
-        <div class="handmade-card">
-
-            <div class="handmade-image">
-                🕯️
-            </div>
-
-            <div>
-                <h3>Handmade Candle</h3>
-                <p>Decorative scented handmade candle.</p>
-
-                <strong>Rs. 950</strong>
-
-                <button onclick="addProductByName('Handmade Candle')">
-                    Add to Cart
-                </button>
-            </div>
-
-        </div>
-
-
-        <div class="handmade-card">
-
-            <div class="handmade-image">
-                🧶
-            </div>
-
-            <div>
-                <h3>Knitted Wool Scarf</h3>
-                <p>Warm and comfortable handmade scarf.</p>
-
-                <strong>Rs. 2,200</strong>
-
-                <button onclick="addProductByName('Knitted Wool Scarf')">
-                    Add to Cart
-                </button>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- ==============================
-     ABOUT
-================================= -->
-
-<section class="about-section" id="about">
-
-    <div class="about-image">
-        🏪
-    </div>
-
-    <div class="about-content">
-
-        <span>ABOUT MARKETNEST</span>
-
-        <h2>Your Local Market, Now Online.</h2>
-
-        <p>
-            MarketNest connects customers with everyday market
-            products and unique handmade items from local creators.
-        </p>
-
-        <p>
-            We make shopping simple, convenient and affordable
-            with reliable delivery directly to your doorstep.
-        </p>
-
-        <div class="about-stats">
+        <div class="hero-stats">
 
             <div>
                 <strong>500+</strong>
@@ -398,13 +159,13 @@
             </div>
 
             <div>
-                <strong>20%</strong>
-                <span>Market Discount</span>
+                <strong>10K+</strong>
+                <span>Customers</span>
             </div>
 
             <div>
                 <strong>24/7</strong>
-                <span>Shopping</span>
+                <span>Support</span>
             </div>
 
         </div>
@@ -414,94 +175,136 @@
 </section>
 
 
-<!-- ==============================
-     DELIVERY FEATURES
-================================= -->
+<!-- =========================
+     FEATURES
+========================= -->
 
 <section class="features">
 
     <div class="feature">
-
-        <i class="fa-solid fa-truck-fast"></i>
-
+        <div class="feature-icon">🚚</div>
         <div>
             <h3>Fast Delivery</h3>
-            <p>Quick delivery to your doorstep.</p>
+            <p>Quick doorstep delivery</p>
         </div>
-
     </div>
 
-
     <div class="feature">
-
-        <i class="fa-solid fa-percent"></i>
-
+        <div class="feature-icon">🔒</div>
         <div>
-            <h3>20% Market Discount</h3>
-            <p>Save automatically on market products.</p>
+            <h3>Secure Payment</h3>
+            <p>100% secure checkout</p>
         </div>
-
     </div>
 
-
     <div class="feature">
-
-        <i class="fa-solid fa-shield-halved"></i>
-
+        <div class="feature-icon">↩️</div>
         <div>
-            <h3>Secure Shopping</h3>
-            <p>Your information stays protected.</p>
+            <h3>Easy Returns</h3>
+            <p>Simple return policy</p>
         </div>
-
     </div>
 
-
     <div class="feature">
-
-        <i class="fa-solid fa-headset"></i>
-
+        <div class="feature-icon">💎</div>
         <div>
-            <h3>Customer Support</h3>
-            <p>We're here whenever you need us.</p>
+            <h3>Premium Quality</h3>
+            <p>Quality you can trust</p>
         </div>
-
     </div>
 
 </section>
 
 
-<!-- ==============================
-     CONTACT
-================================= -->
+<!-- =========================
+     CATEGORIES
+========================= -->
 
-<section class="contact-section" id="contact">
+<section class="categories-section" id="categories">
 
-    <div class="contact-content">
+    <div class="section-heading">
 
-        <span>CONTACT US</span>
+        <span>SHOP BY CATEGORY</span>
 
-        <h2>Need Help?</h2>
+        <h2>Find Your Favorites</h2>
 
         <p>
-            Have a question about an order or product?
-            Contact our support team.
+            Explore our carefully selected collection.
         </p>
 
-        <div class="contact-info">
+    </div>
 
-            <div>
-                <i class="fa-solid fa-phone"></i>
-                <span>+92 300 1234567</span>
+
+    <div class="category-grid">
+
+        <div
+            class="category-card cosmetics-category"
+            data-category="cosmetics"
+        >
+
+            <div class="category-content">
+
+                <span>01</span>
+
+                <h3>Cosmetics</h3>
+
+                <p>
+                    Beauty products with
+                    <strong>5% OFF</strong>
+                </p>
+
+                <button>
+                    Shop Cosmetics →
+                </button>
+
             </div>
 
-            <div>
-                <i class="fa-solid fa-envelope"></i>
-                <span>support@marketnest.com</span>
+        </div>
+
+
+        <div
+            class="category-card jewellery-category"
+            data-category="jewellery"
+        >
+
+            <div class="category-content">
+
+                <span>02</span>
+
+                <h3>Jewellery</h3>
+
+                <p>
+                    Elegant pieces for every occasion
+                </p>
+
+                <button>
+                    Shop Jewellery →
+                </button>
+
             </div>
 
-            <div>
-                <i class="fa-solid fa-location-dot"></i>
-                <span>Karachi, Pakistan</span>
+        </div>
+
+
+        <div
+            class="category-card keychain-category"
+            data-category="keychains"
+        >
+
+            <div class="category-content">
+
+                <span>03</span>
+
+                <h3>Keychains</h3>
+
+                <p>
+                    Cute & stylish everyday accessories
+                </p>
+
+                <button>
+                    Shop Keychains →
+                </button>
+
             </div>
 
         </div>
@@ -511,163 +314,493 @@
 </section>
 
 
-<!-- ==============================
+<!-- =========================
+     OFFERS
+========================= -->
+
+<section class="offer-section" id="offers">
+
+    <div class="offer-content">
+
+        <span class="offer-label">
+            🔥 LIMITED TIME OFFER
+        </span>
+
+        <h2>
+            Buy 1 Get 1
+            <span>FREE</span>
+        </h2>
+
+        <p>
+            Add any eligible product to your cart and
+            receive another one absolutely free.
+        </p>
+
+        <a href="#products" class="offer-btn">
+            Shop The Deal →
+        </a>
+
+    </div>
+
+
+    <div class="offer-circle">
+
+        <div class="circle-inner">
+            <span>BOGO</span>
+            <strong>FREE</strong>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     PRODUCTS
+========================= -->
+
+<section class="products-section" id="products">
+
+    <div class="section-heading">
+
+        <span>OUR COLLECTION</span>
+
+        <h2>Popular Products</h2>
+
+        <p>
+            Beautiful products selected specially for you.
+        </p>
+
+    </div>
+
+
+    <!-- FILTERS -->
+
+    <div class="product-controls">
+
+        <div class="category-filters">
+
+            <button class="filter-btn active" data-filter="all">
+                All
+            </button>
+
+            <button class="filter-btn" data-filter="cosmetics">
+                Cosmetics
+            </button>
+
+            <button class="filter-btn" data-filter="jewellery">
+                Jewellery
+            </button>
+
+            <button class="filter-btn" data-filter="keychains">
+                Keychains
+            </button>
+
+        </div>
+
+        <select id="sortProducts">
+
+            <option value="default">
+                Sort Products
+            </option>
+
+            <option value="low">
+                Price: Low to High
+            </option>
+
+            <option value="high">
+                Price: High to Low
+            </option>
+
+            <option value="name">
+                Name A-Z
+            </option>
+
+        </select>
+
+    </div>
+
+
+    <!-- PRODUCT GRID -->
+
+    <div class="product-grid" id="productGrid">
+
+        <!-- Products generated by JavaScript -->
+
+    </div>
+
+
+    <div class="no-products" id="noProducts">
+
+        <div>🔍</div>
+
+        <h3>No products found</h3>
+
+        <p>
+            Try another search or category.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     NEWSLETTER
+========================= -->
+
+<section class="newsletter" id="contact">
+
+    <div class="newsletter-content">
+
+        <span>STAY UPDATED</span>
+
+        <h2>
+            Get Exclusive Offers
+        </h2>
+
+        <p>
+            Subscribe to receive new product alerts,
+            discounts and special offers.
+        </p>
+
+        <form id="newsletterForm">
+
+            <input
+                type="email"
+                placeholder="Enter your email address"
+                required
+            >
+
+            <button type="submit">
+                Subscribe
+            </button>
+
+        </form>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
      FOOTER
-================================= -->
+========================= -->
 
 <footer>
 
-    <div class="footer-logo">
-        🛍️ MarketNest
+    <div class="footer-grid">
+
+        <div class="footer-about">
+
+            <a href="#" class="logo">
+                <span class="logo-icon">✦</span>
+                Luxe<span>Cart</span>
+            </a>
+
+            <p>
+                Your destination for cosmetics,
+                jewellery and stylish accessories.
+            </p>
+
+            <div class="socials">
+
+                <a href="#">f</a>
+                <a href="#">𝕏</a>
+                <a href="#">◎</a>
+                <a href="#">▶</a>
+
+            </div>
+
+        </div>
+
+
+        <div>
+
+            <h3>Quick Links</h3>
+
+            <a href="#home">Home</a>
+            <a href="#products">Shop</a>
+            <a href="#offers">Offers</a>
+            <a href="#categories">Categories</a>
+
+        </div>
+
+
+        <div>
+
+            <h3>Categories</h3>
+
+            <a href="#products">Cosmetics</a>
+            <a href="#products">Jewellery</a>
+            <a href="#products">Keychains</a>
+
+        </div>
+
+
+        <div>
+
+            <h3>Customer Care</h3>
+
+            <a href="#">Contact Us</a>
+            <a href="#">Delivery Information</a>
+            <a href="#">Returns</a>
+            <a href="#">Privacy Policy</a>
+
+        </div>
+
     </div>
 
-    <p>
-        Your local market and handmade store online.
-    </p>
 
-    <div class="social-icons">
+    <div class="copyright">
 
-        <a href="#"><i class="fab fa-facebook-f"></i></a>
-        <a href="#"><i class="fab fa-instagram"></i></a>
-        <a href="#"><i class="fab fa-whatsapp"></i></a>
-        <a href="#"><i class="fab fa-tiktok"></i></a>
+        <p>
+            © 2026 LuxeCart. All Rights Reserved.
+        </p>
+
+        <p>
+            Made with ♥ for beautiful shopping.
+        </p>
 
     </div>
-
-    <p class="copyright">
-        © 2026 MarketNest. All Rights Reserved.
-    </p>
 
 </footer>
 
 
-<!-- ==============================
+<!-- =========================
      CART SIDEBAR
-================================= -->
+========================= -->
 
-<div class="cart-overlay" id="cartOverlay" onclick="closeCart()"></div>
+<div class="cart-overlay" id="cartOverlay"></div>
 
-<div class="cart-sidebar" id="cartSidebar">
+<aside class="cart-sidebar" id="cartSidebar">
 
     <div class="cart-header">
 
-        <h2>
-            <i class="fa-solid fa-cart-shopping"></i>
-            Your Cart
-        </h2>
+        <div>
+            <span>Your Shopping</span>
+            <h2>Cart</h2>
+        </div>
 
-        <button onclick="closeCart()">
-            <i class="fa-solid fa-xmark"></i>
+        <button id="closeCart">
+            ✕
         </button>
 
     </div>
 
-    <div class="cart-items" id="cartItems"></div>
 
-    <div class="cart-summary">
+    <div class="cart-items" id="cartItems">
 
-        <div>
-            <span>Subtotal</span>
-            <strong id="subtotal">Rs. 0</strong>
+        <!-- Cart items -->
+
+    </div>
+
+
+    <div class="empty-cart" id="emptyCart">
+
+        <div class="empty-cart-icon">
+            🛒
         </div>
 
-        <div class="discount-row">
+        <h3>Your cart is empty</h3>
 
-            <span>Market Discount</span>
+        <p>
+            Add something beautiful!
+        </p>
 
-            <strong id="discount">
-                - Rs. 0
-            </strong>
+        <button id="startShopping">
+            Start Shopping
+        </button>
+
+    </div>
+
+
+    <div class="cart-bottom" id="cartBottom">
+
+        <div class="cart-summary">
+
+            <div>
+                <span>Subtotal</span>
+                <strong id="cartSubtotal">
+                    Rs. 0
+                </strong>
+            </div>
+
+            <div class="discount-row">
+
+                <span>Discount</span>
+
+                <strong id="cartDiscount">
+                    - Rs. 0
+                </strong>
+
+            </div>
+
+            <div>
+
+                <span>Delivery</span>
+
+                <strong id="deliveryFee">
+                    Rs. 250
+                </strong>
+
+            </div>
+
+            <div class="total-row">
+
+                <span>Total</span>
+
+                <strong id="cartTotal">
+                    Rs. 0
+                </strong>
+
+            </div>
 
         </div>
 
-        <div>
-            <span>Delivery</span>
-            <strong>Rs. 200</strong>
-        </div>
 
-        <hr>
+        <button class="checkout-btn" id="checkoutButton">
 
-        <div class="total-row">
-
-            <span>Total</span>
-
-            <strong id="total">
-                Rs. 200
-            </strong>
-
-        </div>
-
-        <button class="checkout-btn" onclick="openCheckout()">
             Proceed to Checkout
-            <i class="fa-solid fa-arrow-right"></i>
+            <span>→</span>
+
         </button>
 
     </div>
 
-</div>
+</aside>
 
 
-<!-- ==============================
+<!-- =========================
      CHECKOUT MODAL
-================================= -->
+========================= -->
 
-<div class="checkout-modal" id="checkoutModal">
+<div class="modal-overlay" id="checkoutModal">
 
-    <div class="checkout-box">
+    <div class="checkout-modal">
 
-        <button class="close-modal" onclick="closeCheckout()">
-            <i class="fa-solid fa-xmark"></i>
+        <button class="modal-close" id="closeCheckout">
+            ✕
         </button>
 
-        <div class="checkout-icon">
-            <i class="fa-solid fa-truck"></i>
+        <div class="checkout-title">
+
+            <span>SECURE CHECKOUT</span>
+
+            <h2>Complete Your Order</h2>
+
+            <p>
+                Enter your delivery information.
+            </p>
+
         </div>
 
-        <h2>Complete Your Order</h2>
 
-        <p>Enter your delivery information.</p>
+        <form id="checkoutForm">
 
-        <form onsubmit="placeOrder(event)">
+            <div class="form-row">
 
-            <input
-                type="text"
-                id="customerName"
-                placeholder="Full Name"
-                required
-            >
+                <div class="input-group">
 
-            <input
-                type="tel"
-                id="customerPhone"
-                placeholder="Phone Number"
-                required
-            >
+                    <label>Full Name</label>
 
-            <textarea
-                id="customerAddress"
-                placeholder="Delivery Address"
-                required
-            ></textarea>
+                    <input
+                        type="text"
+                        id="customerName"
+                        placeholder="Your full name"
+                        required
+                    >
 
-            <select required>
+                </div>
 
-                <option value="">
-                    Select Payment Method
-                </option>
+                <div class="input-group">
 
-                <option>
-                    Cash on Delivery
-                </option>
+                    <label>Phone Number</label>
 
-                <option>
-                    Bank Transfer
-                </option>
+                    <input
+                        type="tel"
+                        placeholder="03XX XXXXXXX"
+                        required
+                    >
 
-            </select>
+                </div>
 
-            <button type="submit" class="place-order-btn">
+            </div>
+
+
+            <div class="input-group">
+
+                <label>Email Address</label>
+
+                <input
+                    type="email"
+                    placeholder="your@email.com"
+                    required
+                >
+
+            </div>
+
+
+            <div class="input-group">
+
+                <label>Delivery Address</label>
+
+                <textarea
+                    placeholder="Enter complete delivery address"
+                    required
+                ></textarea>
+
+            </div>
+
+
+            <div class="form-row">
+
+                <div class="input-group">
+
+                    <label>City</label>
+
+                    <input
+                        type="text"
+                        placeholder="Karachi"
+                        required
+                    >
+
+                </div>
+
+                <div class="input-group">
+
+                    <label>Payment Method</label>
+
+                    <select required>
+
+                        <option value="">
+                            Select payment
+                        </option>
+
+                        <option>
+                            Cash on Delivery
+                        </option>
+
+                        <option>
+                            Bank Transfer
+                        </option>
+
+                        <option>
+                            Online Payment
+                        </option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+
+            <button class="place-order-btn" type="submit">
+
                 Place Order
+                <span>✓</span>
+
             </button>
 
         </form>
@@ -677,17 +810,51 @@
 </div>
 
 
-<!-- ==============================
-     SUCCESS MESSAGE
-================================= -->
+<!-- =========================
+     SUCCESS MODAL
+========================= -->
 
-<div class="success-message" id="successMessage">
+<div class="success-modal" id="successModal">
 
-    <i class="fa-solid fa-circle-check"></i>
+    <div class="success-box">
+
+        <div class="success-icon">
+            ✓
+        </div>
+
+        <h2>
+            Order Placed!
+        </h2>
+
+        <p>
+            Thank you for shopping with LuxeCart.
+            Your order has been received successfully.
+        </p>
+
+        <span class="order-number" id="orderNumber">
+            Order #LC000000
+        </span>
+
+        <button id="continueShopping">
+            Continue Shopping
+        </button>
+
+    </div>
+
+</div>
+
+
+<!-- =========================
+     TOAST
+========================= -->
+
+<div class="toast" id="toast">
+
+    <span class="toast-icon">✓</span>
 
     <div>
-        <strong>Order Placed!</strong>
-        <span>Thank you for shopping with us.</span>
+        <strong>Added to cart</strong>
+        <p>Product added successfully.</p>
     </div>
 
 </div>
@@ -696,6 +863,4 @@
 <script src="script.js"></script>
 
 </body>
-</html>
-
-    
+  </html>

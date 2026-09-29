@@ -4,119 +4,176 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>LuxeCart | Beauty & Jewellery Store</title>
+    <meta name="description"
+          content="Almeas Collection - Jewellery, Cosmetics and Keychains with home delivery.">
 
-    <link rel="stylesheet" href="style.css">
+    <title>Almeas Collection | Jewellery • Cosmetics • Keychains</title>
 
     <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
-        rel="stylesheet"
-    >
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap"
+          rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<!-- =========================
-     TOP OFFER BAR
-========================= -->
+<!-- =========================================
+     LOADING SCREEN
+========================================= -->
 
-<div class="top-bar">
-    <p>
-        🎁 <strong>BUY 1 GET 1 FREE</strong>
-        &nbsp; | &nbsp;
-        💄 Cosmetics have <strong>5% OFF</strong>
-        &nbsp; | &nbsp;
-        🚚 Free delivery on orders over Rs. 5,000
-    </p>
+<div class="loader" id="loader">
+    <div class="loader-content">
+        <div class="loader-logo">A</div>
+        <h2>Almeas Collection</h2>
+        <p>Loading luxury...</p>
+    </div>
 </div>
 
 
-<!-- =========================
+<!-- =========================================
+     ANNOUNCEMENT BAR
+========================================= -->
+
+<div class="announcement-bar">
+    <div class="announcement-track">
+
+        <span>
+            ✨ 5% OFF ON EVERY PRODUCT
+        </span>
+
+        <span>
+            🚚 HOME DELIVERY AVAILABLE
+        </span>
+
+        <span>
+            💎 SHOP • LOVE • SHINE
+        </span>
+
+        <span>
+            🎁 SPECIAL COLLECTIONS AVAILABLE
+        </span>
+
+    </div>
+</div>
+
+
+<!-- =========================================
      NAVBAR
-========================= -->
+========================================= -->
 
 <header class="navbar">
 
     <div class="nav-container">
 
-        <a href="#" class="logo">
-            <span class="logo-icon">✦</span>
-            Luxe<span>Cart</span>
+        <a href="#home" class="logo">
+
+            <div class="logo-symbol">
+                A
+            </div>
+
+            <div class="logo-text">
+                <span>Almeas</span>
+                <small>Collection</small>
+            </div>
+
         </a>
 
-        <nav class="desktop-nav">
-            <a href="#home">Home</a>
-            <a href="#products">Shop</a>
-            <a href="#offers">Offers</a>
-            <a href="#categories">Categories</a>
-            <a href="#contact">Contact</a>
+
+        <nav class="nav-links" id="navLinks">
+
+            <a href="#home" class="active">Home</a>
+
+            <a href="#categories">
+                Categories
+            </a>
+
+            <a href="#products">
+                Shop
+            </a>
+
+            <a href="#about">
+                About
+            </a>
+
+            <a href="#contact">
+                Contact
+            </a>
+
         </nav>
+
 
         <div class="nav-actions">
 
-            <button class="search-button" id="searchToggle">
-                🔍
+            <!-- Search -->
+            <button class="nav-icon" id="searchBtn" aria-label="Search">
+                <i class="fa-solid fa-magnifying-glass"></i>
             </button>
 
-            <button class="wishlist-button">
-                ♡
-                <span class="wishlist-count">0</span>
+            <!-- Wishlist -->
+            <button class="nav-icon" id="wishlistBtn" aria-label="Wishlist">
+                <i class="fa-regular fa-heart"></i>
+                <span class="badge" id="wishlistCount">0</span>
             </button>
 
-            <button class="cart-button" id="cartButton">
-                🛒
-                <span class="cart-count">0</span>
+            <!-- Cart -->
+            <button class="nav-icon" id="cartBtn" aria-label="Shopping Cart">
+                <i class="fa-solid fa-bag-shopping"></i>
+                <span class="badge" id="cartCount">0</span>
             </button>
 
-            <button class="menu-button" id="menuButton">
-                ☰
+            <!-- Mobile Menu -->
+            <button class="mobile-menu" id="mobileMenu">
+                <i class="fa-solid fa-bars"></i>
             </button>
 
         </div>
-
-    </div>
-
-
-    <!-- SEARCH BOX -->
-
-    <div class="search-container" id="searchContainer">
-
-        <div class="search-box">
-
-            <input
-                type="text"
-                id="searchInput"
-                placeholder="Search cosmetics, jewellery, keychains..."
-            >
-
-            <button id="closeSearch">✕</button>
-
-        </div>
-
-    </div>
-
-
-    <!-- MOBILE MENU -->
-
-    <div class="mobile-menu" id="mobileMenu">
-
-        <a href="#home">Home</a>
-        <a href="#products">Shop</a>
-        <a href="#offers">Offers</a>
-        <a href="#categories">Categories</a>
-        <a href="#contact">Contact</a>
 
     </div>
 
 </header>
 
 
-<!-- =========================
-     HERO
-========================= -->
+<!-- =========================================
+     SEARCH PANEL
+========================================= -->
+
+<div class="search-panel" id="searchPanel">
+
+    <div class="search-inner">
+
+        <div class="search-box">
+
+            <i class="fa-solid fa-magnifying-glass"></i>
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search jewellery, cosmetics, keychains..."
+            >
+
+            <button id="closeSearch">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- =========================================
+     HERO SECTION
+========================================= -->
 
 <section class="hero" id="home">
 
@@ -124,112 +181,86 @@
 
     <div class="hero-content">
 
-        <span class="hero-small">
-            ✨ YOUR STYLE. YOUR BEAUTY. YOUR CHOICE.
-        </span>
+        <div class="hero-label">
+            <span></span>
+            WELCOME TO ALMEAS COLLECTION
+            <span></span>
+        </div>
 
         <h1>
-            Discover Your
-            <span>Perfect Style</span>
+            Elegance
+            <br>
+            <span>Made For You</span>
         </h1>
 
         <p>
-            Shop premium cosmetics, beautiful jewellery and
-            unique keychains — delivered directly to your door.
+            Discover beautiful jewellery, cosmetics and
+            adorable keychains designed to make every
+            moment a little more special.
         </p>
 
         <div class="hero-buttons">
 
-            <a href="#products" class="primary-btn">
+            <a href="#products" class="btn btn-primary">
                 Shop Now
-                <span>→</span>
+                <i class="fa-solid fa-arrow-right"></i>
             </a>
 
-            <a href="#offers" class="secondary-btn">
-                View Offers
+            <a href="#categories" class="btn btn-outline">
+                Explore Collection
             </a>
 
         </div>
 
-        <div class="hero-stats">
+        <div class="hero-features">
 
             <div>
-                <strong>500+</strong>
-                <span>Products</span>
+                <i class="fa-solid fa-truck-fast"></i>
+                <span>Home Delivery</span>
             </div>
 
             <div>
-                <strong>10K+</strong>
-                <span>Customers</span>
+                <i class="fa-solid fa-percent"></i>
+                <span>5% Discount</span>
             </div>
 
             <div>
-                <strong>24/7</strong>
-                <span>Support</span>
+                <i class="fa-solid fa-heart"></i>
+                <span>Made With Love</span>
             </div>
 
         </div>
 
+    </div>
+
+
+    <div class="hero-scroll">
+        <span>Scroll to explore</span>
+        <i class="fa-solid fa-chevron-down"></i>
     </div>
 
 </section>
 
 
-<!-- =========================
-     FEATURES
-========================= -->
-
-<section class="features">
-
-    <div class="feature">
-        <div class="feature-icon">🚚</div>
-        <div>
-            <h3>Fast Delivery</h3>
-            <p>Quick doorstep delivery</p>
-        </div>
-    </div>
-
-    <div class="feature">
-        <div class="feature-icon">🔒</div>
-        <div>
-            <h3>Secure Payment</h3>
-            <p>100% secure checkout</p>
-        </div>
-    </div>
-
-    <div class="feature">
-        <div class="feature-icon">↩️</div>
-        <div>
-            <h3>Easy Returns</h3>
-            <p>Simple return policy</p>
-        </div>
-    </div>
-
-    <div class="feature">
-        <div class="feature-icon">💎</div>
-        <div>
-            <h3>Premium Quality</h3>
-            <p>Quality you can trust</p>
-        </div>
-    </div>
-
-</section>
-
-
-<!-- =========================
+<!-- =========================================
      CATEGORIES
-========================= -->
+========================================= -->
 
-<section class="categories-section" id="categories">
+<section class="categories section" id="categories">
 
     <div class="section-heading">
 
-        <span>SHOP BY CATEGORY</span>
+        <span class="section-subtitle">
+            SHOP BY CATEGORY
+        </span>
 
-        <h2>Find Your Favorites</h2>
+        <h2>
+            Find Something
+            <span>Beautiful</span>
+        </h2>
 
         <p>
-            Explore our carefully selected collection.
+            Explore our carefully selected collections.
         </p>
 
     </div>
@@ -237,24 +268,33 @@
 
     <div class="category-grid">
 
-        <div
-            class="category-card cosmetics-category"
-            data-category="cosmetics"
-        >
+        <!-- Jewellery -->
+
+        <div class="category-card jewellery-category"
+             data-category="Jewellery">
+
+            <div class="category-image">
+
+                <img
+                    src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=900&q=80"
+                    alt="Jewellery"
+                >
+
+            </div>
 
             <div class="category-content">
 
                 <span>01</span>
 
-                <h3>Cosmetics</h3>
+                <h3>Jewellery</h3>
 
                 <p>
-                    Beauty products with
-                    <strong>5% OFF</strong>
+                    Elegant pieces for every occasion.
                 </p>
 
-                <button>
-                    Shop Cosmetics →
+                <button class="category-btn" data-filter="Jewellery">
+                    Shop Jewellery
+                    <i class="fa-solid fa-arrow-right"></i>
                 </button>
 
             </div>
@@ -262,23 +302,33 @@
         </div>
 
 
-        <div
-            class="category-card jewellery-category"
-            data-category="jewellery"
-        >
+        <!-- Cosmetics -->
+
+        <div class="category-card cosmetics-category"
+             data-category="Cosmetics">
+
+            <div class="category-image">
+
+                <img
+                    src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&w=900&q=80"
+                    alt="Cosmetics"
+                >
+
+            </div>
 
             <div class="category-content">
 
                 <span>02</span>
 
-                <h3>Jewellery</h3>
+                <h3>Cosmetics</h3>
 
                 <p>
-                    Elegant pieces for every occasion
+                    Beauty essentials for your everyday look.
                 </p>
 
-                <button>
-                    Shop Jewellery →
+                <button class="category-btn" data-filter="Cosmetics">
+                    Shop Cosmetics
+                    <i class="fa-solid fa-arrow-right"></i>
                 </button>
 
             </div>
@@ -286,10 +336,19 @@
         </div>
 
 
-        <div
-            class="category-card keychain-category"
-            data-category="keychains"
-        >
+        <!-- Keychains -->
+
+        <div class="category-card keychain-category"
+             data-category="Keychains">
+
+            <div class="category-image">
+
+                <img
+                    src="https://images.unsplash.com/photo-1616401784845-180882ba9ba8?auto=format&fit=crop&w=900&q=80"
+                    alt="Keychains"
+                >
+
+            </div>
 
             <div class="category-content">
 
@@ -298,11 +357,12 @@
                 <h3>Keychains</h3>
 
                 <p>
-                    Cute & stylish everyday accessories
+                    Cute little accessories made to go everywhere.
                 </p>
 
-                <button>
-                    Shop Keychains →
+                <button class="category-btn" data-filter="Keychains">
+                    Shop Keychains
+                    <i class="fa-solid fa-arrow-right"></i>
                 </button>
 
             </div>
@@ -314,166 +374,402 @@
 </section>
 
 
-<!-- =========================
-     OFFERS
-========================= -->
+<!-- =========================================
+     OFFER BANNER
+========================================= -->
 
-<section class="offer-section" id="offers">
+<section class="offer-section">
 
     <div class="offer-content">
 
-        <span class="offer-label">
-            🔥 LIMITED TIME OFFER
-        </span>
+        <div class="offer-icon">
+            <i class="fa-solid fa-gift"></i>
+        </div>
 
-        <h2>
-            Buy 1 Get 1
-            <span>FREE</span>
-        </h2>
+        <div>
+            <span>LIMITED TIME OFFER</span>
 
-        <p>
-            Add any eligible product to your cart and
-            receive another one absolutely free.
-        </p>
+            <h2>
+                Get <strong>5% OFF</strong>
+                Every Product
+            </h2>
 
-        <a href="#products" class="offer-btn">
-            Shop The Deal →
+            <p>
+                Your discount is automatically applied
+                when you add products to your cart.
+            </p>
+        </div>
+
+        <a href="#products" class="btn btn-light">
+            Shop Offer
         </a>
 
     </div>
 
-
-    <div class="offer-circle">
-
-        <div class="circle-inner">
-            <span>BOGO</span>
-            <strong>FREE</strong>
-        </div>
-
-    </div>
-
 </section>
 
 
-<!-- =========================
+<!-- =========================================
      PRODUCTS
-========================= -->
+========================================= -->
 
-<section class="products-section" id="products">
+<section class="products-section section" id="products">
 
     <div class="section-heading">
 
-        <span>OUR COLLECTION</span>
+        <span class="section-subtitle">
+            OUR COLLECTION
+        </span>
 
-        <h2>Popular Products</h2>
+        <h2>
+            Shop Your
+            <span>Favorites</span>
+        </h2>
 
         <p>
-            Beautiful products selected specially for you.
+            Beautiful products at beautiful prices.
         </p>
 
     </div>
 
 
-    <!-- FILTERS -->
+    <!-- Filter Buttons -->
 
-    <div class="product-controls">
+    <div class="filter-buttons">
 
-        <div class="category-filters">
+        <button class="filter-btn active" data-filter="All">
+            All Products
+        </button>
 
-            <button class="filter-btn active" data-filter="all">
-                All
-            </button>
+        <button class="filter-btn" data-filter="Jewellery">
+            Jewellery
+        </button>
 
-            <button class="filter-btn" data-filter="cosmetics">
-                Cosmetics
-            </button>
+        <button class="filter-btn" data-filter="Cosmetics">
+            Cosmetics
+        </button>
 
-            <button class="filter-btn" data-filter="jewellery">
-                Jewellery
-            </button>
-
-            <button class="filter-btn" data-filter="keychains">
-                Keychains
-            </button>
-
-        </div>
-
-        <select id="sortProducts">
-
-            <option value="default">
-                Sort Products
-            </option>
-
-            <option value="low">
-                Price: Low to High
-            </option>
-
-            <option value="high">
-                Price: High to Low
-            </option>
-
-            <option value="name">
-                Name A-Z
-            </option>
-
-        </select>
+        <button class="filter-btn" data-filter="Keychains">
+            Keychains
+        </button>
 
     </div>
 
 
-    <!-- PRODUCT GRID -->
+    <!-- Products -->
 
     <div class="product-grid" id="productGrid">
 
-        <!-- Products generated by JavaScript -->
-
-    </div>
-
-
-    <div class="no-products" id="noProducts">
-
-        <div>🔍</div>
-
-        <h3>No products found</h3>
-
-        <p>
-            Try another search or category.
-        </p>
+        <!-- Products will be generated using JavaScript -->
 
     </div>
 
 </section>
 
 
-<!-- =========================
-     NEWSLETTER
-========================= -->
+<!-- =========================================
+     WHY CHOOSE US
+========================================= -->
 
-<section class="newsletter" id="contact">
+<section class="why-section">
 
-    <div class="newsletter-content">
+    <div class="section-heading light">
 
-        <span>STAY UPDATED</span>
+        <span class="section-subtitle">
+            WHY ALMEAS?
+        </span>
 
         <h2>
-            Get Exclusive Offers
+            Shopping Made
+            <span>Special</span>
+        </h2>
+
+    </div>
+
+
+    <div class="why-grid">
+
+        <div class="why-card">
+
+            <div class="why-icon">
+                <i class="fa-solid fa-truck"></i>
+            </div>
+
+            <h3>Home Delivery</h3>
+
+            <p>
+                Get your favourite products delivered
+                directly to your doorstep.
+            </p>
+
+        </div>
+
+
+        <div class="why-card">
+
+            <div class="why-icon">
+                <i class="fa-solid fa-percent"></i>
+            </div>
+
+            <h3>5% Discount</h3>
+
+            <p>
+                Enjoy an automatic 5% discount
+                on every product.
+            </p>
+
+        </div>
+
+
+        <div class="why-card">
+
+            <div class="why-icon">
+                <i class="fa-solid fa-gem"></i>
+            </div>
+
+            <h3>Beautiful Products</h3>
+
+            <p>
+                Carefully selected accessories and
+                beauty products.
+            </p>
+
+        </div>
+
+
+        <div class="why-card">
+
+            <div class="why-icon">
+                <i class="fa-solid fa-headset"></i>
+            </div>
+
+            <h3>Customer Support</h3>
+
+            <p>
+                We're here to help with your
+                shopping experience.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================
+     ABOUT
+========================================= -->
+
+<section class="about-section section" id="about">
+
+    <div class="about-image">
+
+        <img
+            src="https://images.unsplash.com/photo-1617038220319-276d3cfab638?auto=format&fit=crop&w=1000&q=80"
+            alt="Almeas Collection"
+        >
+
+        <div class="about-floating">
+
+            <strong>5%</strong>
+            <span>OFF</span>
+
+        </div>
+
+    </div>
+
+
+    <div class="about-content">
+
+        <span class="section-subtitle">
+            ABOUT ALMEAS COLLECTION
+        </span>
+
+        <h2>
+            Beauty,
+            <span>Elegance</span>
+            & You
         </h2>
 
         <p>
-            Subscribe to receive new product alerts,
-            discounts and special offers.
+            Almeas Collection is an online destination
+            for people who love beautiful accessories,
+            cosmetics and cute everyday essentials.
+        </p>
+
+        <p>
+            From elegant jewellery to beauty essentials
+            and adorable keychains, we bring together
+            products that add a little sparkle to your day.
+        </p>
+
+        <div class="about-list">
+
+            <div>
+                <i class="fa-solid fa-check"></i>
+                <span>5% discount on every product</span>
+            </div>
+
+            <div>
+                <i class="fa-solid fa-check"></i>
+                <span>Home delivery available</span>
+            </div>
+
+            <div>
+                <i class="fa-solid fa-check"></i>
+                <span>Easy online ordering</span>
+            </div>
+
+        </div>
+
+        <a href="#products" class="btn btn-primary">
+            Explore Products
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================
+     TESTIMONIALS
+========================================= -->
+
+<section class="testimonial-section section">
+
+    <div class="section-heading">
+
+        <span class="section-subtitle">
+            CUSTOMER LOVE
+        </span>
+
+        <h2>
+            What Our Customers
+            <span>Say</span>
+        </h2>
+
+    </div>
+
+
+    <div class="testimonial-grid">
+
+        <div class="testimonial-card">
+
+            <div class="stars">
+                ★★★★★
+            </div>
+
+            <p>
+                "Absolutely loved the jewellery!
+                The design was even prettier in person."
+            </p>
+
+            <div class="customer">
+                <div class="customer-avatar">
+                    A
+                </div>
+
+                <div>
+                    <strong>Ayesha</strong>
+                    <span>Happy Customer</span>
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="testimonial-card">
+
+            <div class="stars">
+                ★★★★★
+            </div>
+
+            <p>
+                "The keychain was so cute and delivery
+                was very convenient."
+            </p>
+
+            <div class="customer">
+
+                <div class="customer-avatar">
+                    S
+                </div>
+
+                <div>
+                    <strong>Sana</strong>
+                    <span>Happy Customer</span>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="testimonial-card">
+
+            <div class="stars">
+                ★★★★★
+            </div>
+
+            <p>
+                "I really liked the cosmetics collection.
+                Beautiful products and affordable prices."
+            </p>
+
+            <div class="customer">
+
+                <div class="customer-avatar">
+                    M
+                </div>
+
+                <div>
+                    <strong>Maryam</strong>
+                    <span>Happy Customer</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================
+     NEWSLETTER
+========================================= -->
+
+<section class="newsletter-section">
+
+    <div class="newsletter-content">
+
+        <div class="newsletter-icon">
+            <i class="fa-regular fa-envelope"></i>
+        </div>
+
+        <h2>
+            Stay In The Loop
+        </h2>
+
+        <p>
+            Subscribe for new arrivals,
+            offers and exclusive collections.
         </p>
 
         <form id="newsletterForm">
 
             <input
                 type="email"
+                id="newsletterEmail"
                 placeholder="Enter your email address"
                 required
             >
 
             <button type="submit">
                 Subscribe
+                <i class="fa-solid fa-arrow-right"></i>
             </button>
 
         </form>
@@ -483,107 +779,151 @@
 </section>
 
 
-<!-- =========================
+<!-- =========================================
      FOOTER
-========================= -->
+========================================= -->
 
-<footer>
+<footer class="footer" id="contact">
 
-    <div class="footer-grid">
+    <div class="footer-container">
 
-        <div class="footer-about">
+        <div class="footer-column brand-column">
 
-            <a href="#" class="logo">
-                <span class="logo-icon">✦</span>
-                Luxe<span>Cart</span>
+            <a href="#home" class="footer-logo">
+
+                <div class="logo-symbol">
+                    A
+                </div>
+
+                <div class="logo-text">
+                    <span>Almeas</span>
+                    <small>Collection</small>
+                </div>
+
             </a>
 
             <p>
-                Your destination for cosmetics,
-                jewellery and stylish accessories.
+                Jewellery, cosmetics and keychains
+                made to add a little beauty to your day.
             </p>
 
-            <div class="socials">
+            <div class="social-links">
 
-                <a href="#">f</a>
-                <a href="#">𝕏</a>
-                <a href="#">◎</a>
-                <a href="#">▶</a>
+                <a href="#" aria-label="Facebook">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+
+                <a href="#" aria-label="Instagram">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+
+                <a href="#" aria-label="TikTok">
+                    <i class="fa-brands fa-tiktok"></i>
+                </a>
+
+                <a href="#" aria-label="WhatsApp">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </a>
 
             </div>
 
         </div>
 
 
-        <div>
+        <div class="footer-column">
 
             <h3>Quick Links</h3>
 
             <a href="#home">Home</a>
             <a href="#products">Shop</a>
-            <a href="#offers">Offers</a>
             <a href="#categories">Categories</a>
+            <a href="#about">About Us</a>
 
         </div>
 
 
-        <div>
+        <div class="footer-column">
 
             <h3>Categories</h3>
 
-            <a href="#products">Cosmetics</a>
-            <a href="#products">Jewellery</a>
-            <a href="#products">Keychains</a>
+            <a href="#products" data-footer-filter="Jewellery">
+                Jewellery
+            </a>
+
+            <a href="#products" data-footer-filter="Cosmetics">
+                Cosmetics
+            </a>
+
+            <a href="#products" data-footer-filter="Keychains">
+                Keychains
+            </a>
 
         </div>
 
 
-        <div>
+        <div class="footer-column">
 
-            <h3>Customer Care</h3>
+            <h3>Contact Us</h3>
 
-            <a href="#">Contact Us</a>
-            <a href="#">Delivery Information</a>
-            <a href="#">Returns</a>
-            <a href="#">Privacy Policy</a>
+            <div class="contact-item">
+                <i class="fa-solid fa-location-dot"></i>
+                <span>Pakistan</span>
+            </div>
+
+            <div class="contact-item">
+                <i class="fa-solid fa-phone"></i>
+                <span>+92 XXX XXXXXXX</span>
+            </div>
+
+            <div class="contact-item">
+                <i class="fa-solid fa-envelope"></i>
+                <span>info@almeascollection.com</span>
+            </div>
+
+            <div class="contact-item">
+                <i class="fa-solid fa-truck"></i>
+                <span>Home Delivery Available</span>
+            </div>
 
         </div>
 
     </div>
 
 
-    <div class="copyright">
+    <div class="footer-bottom">
 
         <p>
-            © 2026 LuxeCart. All Rights Reserved.
+            © 2026 Almeas Collection. All Rights Reserved.
         </p>
 
-        <p>
-            Made with ♥ for beautiful shopping.
-        </p>
+        <div>
+            <span>Made with</span>
+            <i class="fa-solid fa-heart"></i>
+            <span>for you</span>
+        </div>
 
     </div>
 
 </footer>
 
 
-<!-- =========================
+<!-- =========================================
      CART SIDEBAR
-========================= -->
+========================================= -->
 
-<div class="cart-overlay" id="cartOverlay"></div>
+<div class="overlay" id="overlay"></div>
 
 <aside class="cart-sidebar" id="cartSidebar">
 
     <div class="cart-header">
 
         <div>
-            <span>Your Shopping</span>
-            <h2>Cart</h2>
+            <span>Your Shopping Bag</span>
+            <h2>My Cart</h2>
         </div>
 
         <button id="closeCart">
-            ✕
+            <i class="fa-solid fa-xmark"></i>
         </button>
 
     </div>
@@ -591,79 +931,53 @@
 
     <div class="cart-items" id="cartItems">
 
-        <!-- Cart items -->
+        <!-- Cart generated by JavaScript -->
 
     </div>
 
 
-    <div class="empty-cart" id="emptyCart">
+    <div class="cart-empty" id="cartEmpty">
 
-        <div class="empty-cart-icon">
-            🛒
-        </div>
+        <i class="fa-solid fa-bag-shopping"></i>
 
-        <h3>Your cart is empty</h3>
+        <h3>Your bag is empty</h3>
 
         <p>
-            Add something beautiful!
+            Add something beautiful to your bag.
         </p>
 
-        <button id="startShopping">
-            Start Shopping
+        <button class="btn btn-primary" id="continueShopping">
+            Continue Shopping
         </button>
 
     </div>
 
 
-    <div class="cart-bottom" id="cartBottom">
+    <div class="cart-summary" id="cartSummary">
 
-        <div class="cart-summary">
-
-            <div>
-                <span>Subtotal</span>
-                <strong id="cartSubtotal">
-                    Rs. 0
-                </strong>
-            </div>
-
-            <div class="discount-row">
-
-                <span>Discount</span>
-
-                <strong id="cartDiscount">
-                    - Rs. 0
-                </strong>
-
-            </div>
-
-            <div>
-
-                <span>Delivery</span>
-
-                <strong id="deliveryFee">
-                    Rs. 250
-                </strong>
-
-            </div>
-
-            <div class="total-row">
-
-                <span>Total</span>
-
-                <strong id="cartTotal">
-                    Rs. 0
-                </strong>
-
-            </div>
-
+        <div class="summary-row">
+            <span>Subtotal</span>
+            <strong id="cartSubtotal">Rs. 0</strong>
         </div>
 
+        <div class="summary-row discount-row">
+            <span>5% Discount</span>
+            <strong id="cartDiscount">- Rs. 0</strong>
+        </div>
 
-        <button class="checkout-btn" id="checkoutButton">
+        <div class="summary-row delivery-row">
+            <span>Delivery</span>
+            <strong id="deliveryCost">Rs. 200</strong>
+        </div>
 
+        <div class="summary-total">
+            <span>Total</span>
+            <strong id="cartTotal">Rs. 200</strong>
+        </div>
+
+        <button class="checkout-btn" id="checkoutBtn">
             Proceed to Checkout
-            <span>→</span>
-
+            <i class="fa-solid fa-arrow-right"></i>
         </button>
 
     </div>
@@ -671,26 +985,52 @@
 </aside>
 
 
-<!-- =========================
+<!-- =========================================
+     WISHLIST SIDEBAR
+========================================= -->
+
+<aside class="wishlist-sidebar" id="wishlistSidebar">
+
+    <div class="cart-header">
+
+        <div>
+            <span>Your Favorites</span>
+            <h2>Wishlist</h2>
+        </div>
+
+        <button id="closeWishlist">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+
+    </div>
+
+    <div id="wishlistItems" class="wishlist-items"></div>
+
+</aside>
+
+
+<!-- =========================================
      CHECKOUT MODAL
-========================= -->
+========================================= -->
 
-<div class="modal-overlay" id="checkoutModal">
+<div class="modal" id="checkoutModal">
 
-    <div class="checkout-modal">
+    <div class="modal-content checkout-modal">
 
         <button class="modal-close" id="closeCheckout">
-            ✕
+            <i class="fa-solid fa-xmark"></i>
         </button>
 
         <div class="checkout-title">
 
-            <span>SECURE CHECKOUT</span>
+            <span>ALMEAS COLLECTION</span>
 
-            <h2>Complete Your Order</h2>
+            <h2>
+                Complete Your Order
+            </h2>
 
             <p>
-                Enter your delivery information.
+                Enter your delivery details below.
             </p>
 
         </div>
@@ -698,95 +1038,115 @@
 
         <form id="checkoutForm">
 
-            <div class="form-row">
+            <div class="form-grid">
 
-                <div class="input-group">
+                <div class="form-group">
 
-                    <label>Full Name</label>
+                    <label for="customerName">
+                        Full Name *
+                    </label>
 
                     <input
                         type="text"
                         id="customerName"
-                        placeholder="Your full name"
                         required
+                        placeholder="Your full name"
                     >
 
                 </div>
 
-                <div class="input-group">
 
-                    <label>Phone Number</label>
+                <div class="form-group">
+
+                    <label for="customerPhone">
+                        Phone Number *
+                    </label>
 
                     <input
                         type="tel"
-                        placeholder="03XX XXXXXXX"
+                        id="customerPhone"
                         required
+                        placeholder="+92 XXX XXXXXXX"
                     >
 
                 </div>
 
-            </div>
+
+                <div class="form-group">
+
+                    <label for="customerEmail">
+                        Email
+                    </label>
+
+                    <input
+                        type="email"
+                        id="customerEmail"
+                        placeholder="your@email.com"
+                    >
+
+                </div>
 
 
-            <div class="input-group">
+                <div class="form-group">
 
-                <label>Email Address</label>
-
-                <input
-                    type="email"
-                    placeholder="your@email.com"
-                    required
-                >
-
-            </div>
-
-
-            <div class="input-group">
-
-                <label>Delivery Address</label>
-
-                <textarea
-                    placeholder="Enter complete delivery address"
-                    required
-                ></textarea>
-
-            </div>
-
-
-            <div class="form-row">
-
-                <div class="input-group">
-
-                    <label>City</label>
+                    <label for="customerCity">
+                        City *
+                    </label>
 
                     <input
                         type="text"
-                        placeholder="Karachi"
+                        id="customerCity"
                         required
+                        placeholder="Your city"
                     >
 
                 </div>
 
-                <div class="input-group">
 
-                    <label>Payment Method</label>
+                <div class="form-group full">
 
-                    <select required>
+                    <label for="customerAddress">
+                        Complete Delivery Address *
+                    </label>
+
+                    <textarea
+                        id="customerAddress"
+                        required
+                        placeholder="House number, street, area..."
+                    ></textarea>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="customerArea">
+                        Area / Landmark
+                    </label>
+
+                    <input
+                        type="text"
+                        id="customerArea"
+                        placeholder="Nearby landmark"
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="paymentMethod">
+                        Payment Method *
+                    </label>
+
+                    <select id="paymentMethod" required>
 
                         <option value="">
-                            Select payment
+                            Select Payment
                         </option>
 
-                        <option>
+                        <option value="Cash on Delivery">
                             Cash on Delivery
-                        </option>
-
-                        <option>
-                            Bank Transfer
-                        </option>
-
-                        <option>
-                            Online Payment
                         </option>
 
                     </select>
@@ -796,10 +1156,31 @@
             </div>
 
 
-            <button class="place-order-btn" type="submit">
+            <div class="checkout-summary">
+
+                <div>
+                    <span>Items</span>
+                    <strong id="checkoutItems">0</strong>
+                </div>
+
+                <div>
+                    <span>Discount</span>
+                    <strong id="checkoutDiscount">Rs. 0</strong>
+                </div>
+
+                <div class="checkout-final">
+                    <span>Total Payable</span>
+                    <strong id="checkoutTotal">Rs. 0</strong>
+                </div>
+
+            </div>
+
+
+            <button type="submit" class="place-order-btn">
+
+                <i class="fa-solid fa-lock"></i>
 
                 Place Order
-                <span>✓</span>
 
             </button>
 
@@ -810,32 +1191,47 @@
 </div>
 
 
-<!-- =========================
+<!-- =========================================
      SUCCESS MODAL
-========================= -->
+========================================= -->
 
-<div class="success-modal" id="successModal">
+<div class="modal" id="successModal">
 
-    <div class="success-box">
+    <div class="modal-content success-modal">
+
+        <button class="modal-close" id="closeSuccess">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
 
         <div class="success-icon">
-            ✓
+            <i class="fa-solid fa-check"></i>
         </div>
 
+        <span class="success-small">
+            ORDER CONFIRMED
+        </span>
+
         <h2>
-            Order Placed!
+            Thank You!
         </h2>
 
         <p>
-            Thank you for shopping with LuxeCart.
-            Your order has been received successfully.
+            Your order has been successfully placed.
         </p>
 
-        <span class="order-number" id="orderNumber">
-            Order #LC000000
-        </span>
+        <div class="order-number">
+            Order #
+            <strong id="orderNumber">
+                AC000000
+            </strong>
+        </div>
 
-        <button id="continueShopping">
+        <p class="success-note">
+            Our team will contact you shortly
+            to confirm your delivery.
+        </p>
+
+        <button class="btn btn-primary" id="successContinue">
             Continue Shopping
         </button>
 
@@ -844,23 +1240,30 @@
 </div>
 
 
-<!-- =========================
+<!-- =========================================
      TOAST
-========================= -->
+========================================= -->
 
 <div class="toast" id="toast">
 
-    <span class="toast-icon">✓</span>
+    <i class="fa-solid fa-circle-check"></i>
 
     <div>
-        <strong>Added to cart</strong>
-        <p>Product added successfully.</p>
+        <strong id="toastTitle">
+            Success
+        </strong>
+
+        <span id="toastMessage">
+            Product added to cart.
+        </span>
     </div>
 
 </div>
 
 
+<!-- JAVASCRIPT -->
+
 <script src="script.js"></script>
 
 </body>
-  </html>
+</html>

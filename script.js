@@ -18,7 +18,7 @@ const products = [
         rating: 5,
         reviews: 42,
         image:
-            "images/IMG_20260929_130154_573.jpg"
+            "image/IMG_20260929_130154_573.jpg"
     },
 
     {
@@ -29,7 +29,7 @@ const products = [
         rating: 5,
         reviews: 35,
         image:
-            "images/IMG_20260929_130041_321.jpg"
+            "image/IMG_20260929_130041_321.jpg"
     },
 
     {
@@ -40,7 +40,7 @@ const products = [
         rating: 4,
         reviews: 27,
         image:
-            "images/IMG_20260929_130054_317.jpg"
+            "image/IMG_20260929_130054_317.jpg"
     },
 
     {

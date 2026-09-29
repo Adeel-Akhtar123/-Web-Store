@@ -201,22 +201,18 @@ a {
 
 
 /* =========================================
-   ANNOUNCEMENT BAR
+   COMPACT ANNOUNCEMENT BAR
 ========================================= */
 
 .announcement-bar {
 
-    height: 36px;
+    width: 100%;
 
-    background:
-        linear-gradient(
-            90deg,
-            var(--dark),
-            #34242b,
-            var(--dark)
-        );
+    height: 30px;
 
-    color: white;
+    background: #111827;
+
+    color: #ffffff;
 
     overflow: hidden;
 
@@ -224,42 +220,129 @@ a {
 
     align-items: center;
 
+    position: relative;
+
+    z-index: 9999;
+
 }
+
+
+/* =========================================
+   MOVING TRACK
+========================================= */
 
 .announcement-track {
 
     display: flex;
 
-    gap: 100px;
+    align-items: center;
+
+    width: max-content;
 
     white-space: nowrap;
 
-    min-width: max-content;
-
     animation:
-        announcement 25s linear infinite;
+        announcementMove
+        35s
+        linear
+        infinite;
 
 }
 
-.announcement-track span {
+
+/* =========================================
+   ANNOUNCEMENT TEXT
+========================================= */
+
+.announcement-item {
+
+    display: flex;
+
+    align-items: center;
+
+    padding: 0 35px;
+
+    white-space: nowrap;
 
     font-size: 11px;
 
-    letter-spacing: 1.5px;
+    font-weight: 500;
+
+    letter-spacing: 0.4px;
 
 }
 
-@keyframes announcement {
+
+/* =========================================
+   GOLD HIGHLIGHT
+========================================= */
+
+.announcement-item::first-letter {
+
+    color: #f5c451;
+
+}
+
+
+/* =========================================
+   MOVEMENT
+========================================= */
+
+@keyframes announcementMove {
 
     from {
+
         transform: translateX(0);
+
     }
 
     to {
+
         transform: translateX(-50%);
+
     }
 
 }
+
+
+/* =========================================
+   PAUSE ON HOVER
+========================================= */
+
+.announcement-bar:hover
+.announcement-track {
+
+    animation-play-state: paused;
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+    .announcement-bar {
+
+        height: 27px;
+
+    }
+
+
+    .announcement-item {
+
+        padding: 0 22px;
+
+        font-size: 9px;
+
+        letter-spacing: 0.25px;
+
+    }
+
+}
+
+
 
 
 /* =========================================
@@ -5430,6 +5513,8 @@ a {
         font-size: 13px;
     }
 }
+
+
 
 
 

@@ -100,46 +100,46 @@ const products = [
 
     {
         id: 9,
-        name: "Cute Heart Keychain",
+        name: "Cute Cherry Keychains"
         category: "Keychains",
         price: 750,
         rating: 5,
         reviews: 63,
         image:
-            "https://images.unsplash.com/photo-1616401784845-180882ba9ba8?auto=format&fit=crop&w=700&q=80"
+            "image/IMG-20260808-WA0045.jpg"
     },
 
     {
         id: 10,
-        name: "Cute Teddy Keychain",
+        name: "Popcorn Keychain",
         category: "Keychains",
-        price: 850,
+        price: 450,
         rating: 5,
         reviews: 44,
         image:
-            "https://images.unsplash.com/photo-1575361204480-aadea25e6e68?auto=format&fit=crop&w=700&q=80"
+            "image/IMG-20260808-WA0043.jpg"
     },
 
     {
         id: 11,
-        name: "Butterfly Keychain",
+        name: "Flag Keychain",
         category: "Keychains",
-        price: 650,
+        price: 350,
         rating: 4,
         reviews: 22,
         image:
-            "https://images.unsplash.com/photo-1602173574767-37ac01994b2a?auto=format&fit=crop&w=700&q=80"
+            "image/IMG-20260808-WA0047.jpg"
     },
 
     {
         id: 12,
-        name: "Pearl Keychain",
+        name: "",
         category: "Keychains",
         price: 900,
         rating: 5,
         reviews: 38,
         image:
-            "https://images.unsplash.com/photo-1611652022419-a9419f74343d?auto=format&fit=crop&w=700&q=80"
+            ""
     }
 
 ];

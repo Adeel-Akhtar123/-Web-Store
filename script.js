@@ -128,13 +128,13 @@ const products = [
 
     {
         id: 12,
-        name: "Cute Character Keychain",
+        name: "Cute Heart Keychain",
         category: "Keychains",
-        price: 900,
+        price: 400,
         rating: 5,
         reviews: 38,
         image:
-            "https://placehold.co/700x700/f3e9e4/8c7068?text=Almeas+Collection"
+            "image/IMG_20260929_185853_493.jpg"
     }
 
 ];

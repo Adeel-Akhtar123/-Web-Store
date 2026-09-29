@@ -12,35 +12,35 @@ const products = [
 
     {
         id: 1,
-        name: "Golden Pearl Necklace",
+        name: "Couples Ring",
         category: "Jewellery",
-        price: 3500,
+        price: 100,
         rating: 5,
         reviews: 42,
         image:
-            "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=700&q=80"
+            "images/IMG_20260929_130154_573.jpg"
     },
 
     {
         id: 2,
-        name: "Elegant Gold Earrings",
+        name: "Elegant Golden Earrings",
         category: "Jewellery",
-        price: 2200,
+        price: 200,
         rating: 5,
         reviews: 35,
         image:
-            "https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&w=700&q=80"
+            "images/IMG_20260929_130041_321.jpg"
     },
 
     {
         id: 3,
-        name: "Luxury Bracelet",
+        name: "Childern's Catcher Set",
         category: "Jewellery",
-        price: 2800,
+        price: 300,
         rating: 4,
         reviews: 27,
         image:
-            "https://images.unsplash.com/photo-1611591437281-460bfbe1220a?auto=format&fit=crop&w=700&q=80"
+            "images/IMG_20260929_130054_317.jpg"
     },
 
     {

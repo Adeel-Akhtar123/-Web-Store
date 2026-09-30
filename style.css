@@ -3449,7 +3449,6 @@ a {
 
 }
 
-
 /* =========================================
    RESPONSIVE - TABLET
 ========================================= */
@@ -5513,6 +5512,79 @@ a {
         font-size: 13px;
     }
 }
+```css
+/* =========================================================
+   HERO BUTTONS — KEEP IN ONE SINGLE LINE
+   ========================================================= */
+
+.hero-buttons {
+    display: flex;
+    flex-direction: row !important;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: nowrap !important;
+    gap: 12px;
+    width: 100%;
+}
+
+.hero-buttons .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: auto !important;
+    min-width: max-content;
+    flex: 0 0 auto !important;
+    white-space: nowrap !important;
+}
+
+
+/* =========================================================
+   MOBILE — STILL KEEP BUTTONS IN ONE LINE
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+    .hero-buttons {
+        display: flex;
+        flex-direction: row !important;
+        flex-wrap: nowrap !important;
+        align-items: center;
+        gap: 8px;
+        width: 100%;
+    }
+
+    .hero-buttons .btn {
+        width: auto !important;
+        min-width: 0;
+        flex: 1 1 0 !important;
+        white-space: nowrap !important;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+
+
+/* =========================================================
+   VERY SMALL SCREENS
+   ========================================================= */
+
+@media (max-width: 360px) {
+
+    .hero-buttons {
+        gap: 6px;
+    }
+
+    .hero-buttons .btn {
+        flex: 1 1 0 !important;
+        font-size: 8px;
+        padding-left: 7px;
+        padding-right: 7px;
+        white-space: nowrap !important;
+    }
+}
+
+
+
 
 
 
